@@ -4,7 +4,11 @@
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" formControlName="name">
-        <div class="alert alert-danger" *ngIf="!myForm.controls['userData'].controls['name'].valid">
+        
+<!--         <div class="alert alert-danger" *ngIf="!myForm.controls['userData'].controls['name'].valid">
+          Required
+        </div> -->
+        <div class="alert alert-danger" *ngIf="!myForm.get('userData.name').valid">
           Required
         </div>
       </div>
@@ -12,7 +16,10 @@
       <div class="form-group">
         <label for="email">E-Mail</label>
         <input type="text" class="form-control" id="email" formControlName="email">
-        <div class="alert alert-danger" *ngIf="!myForm.controls['userData'].controls['email'].valid">
+<!--         <div class="alert alert-danger" *ngIf="!myForm.controls['userData'].controls['email'].valid">
+          Required
+        </div> -->
+        <div class="alert alert-danger" *ngIf="!myForm.get('userData.email').valid">
           Required
         </div>
       </div>
